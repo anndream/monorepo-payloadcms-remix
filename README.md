@@ -35,13 +35,14 @@ This turborepo uses [pnpm](https://pnpm.io) as a packages manager. It includes t
 -   You will automatically have access to the running PayloadCMS instance and authenticated user within your Remix loaders and actions, through the [context](https://remix.run/docs/en/v1/api/conventions#loader-context) parameter. This means that you will be able to use the PayloadCMS [local API](https://payloadcms.com/docs/local-api/overview) in order to query data:
 
 ```
-export const loader: LoaderFunction = async ({
-  context,
-}) => {
-  const { user, payload } = context;
-  payload.find({
-    ...
-  })
+export const loader: LoaderFunction = async ({ context }) => {
+    const { payload } = context;
+
+    const users = await payload.find({
+        collection: 'users',
+    });
+
+    return users.docs;
 };
 ```
 
