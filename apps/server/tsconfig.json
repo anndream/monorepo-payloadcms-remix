@@ -1,0 +1,13 @@
+{
+  "extends": "ts-config/react-library.json",
+  "include": ["index.js"],
+  "exclude": ["node_modules", "dist", "build"],
+  "compilerOptions": {
+    "lib": ["ES2019"],
+    "module": "ESNext",
+    "target": "ES2019",
+    "outDir": "./dist",
+    "rootDir": "."
+  },
+  "noEmit": true
+}

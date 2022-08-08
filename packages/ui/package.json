@@ -1,0 +1,38 @@
+{
+    "name": "ui",
+    "version": "0.0.0",
+    "private": true,
+    "exports": {
+        ".": {
+            "import": "./build/index.mjs",
+            "require": "./build/index.js",
+            "types": "./build/index.d.ts"
+        }
+    },
+    "scripts": {
+        "dev": "tsup ./src/index.ts --watch",
+        "build": "tsup ./src/index.ts",
+        "lint": "eslint *.ts*"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.15",
+        "@types/react-dom": "^18.0.6",
+        "eslint": "^8.21.0",
+        "eslint-config": "workspace:*",
+        "react": "^18.2.0",
+        "ts-config": "workspace:*",
+        "tsup-config": "workspace:*",
+        "typescript": "^4.7.4",
+        "tsup": "^6.2.1"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "packageManager": "pnpm@7.3.0",
+    "volta": {
+        "node": "16.16.0"
+    }
+}

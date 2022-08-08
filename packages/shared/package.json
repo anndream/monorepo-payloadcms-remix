@@ -1,0 +1,33 @@
+{
+    "name": "shared",
+    "version": "0.0.0",
+    "private": true,
+    "exports": {
+        ".": {
+            "import": "./build/index.mjs",
+            "require": "./build/index.js",
+            "types": "./build/index.d.ts"
+        }
+    },
+    "scripts": {
+        "dev": "tsup ./index.ts --watch",
+        "build": "tsup ./index.ts",
+        "lint": "eslint *.ts*"
+    },
+    "dependencies": {
+        "dotenv": "^16.0.1"
+    },
+    "devDependencies": {
+        "typescript": "^4.7.4",
+        "ts-config": "workspace:*",
+        "tsup-config": "workspace:*",
+        "tsup": "^6.2.1"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "packageManager": "pnpm@7.3.0",
+    "volta": {
+        "node": "16.16.0"
+    }
+}

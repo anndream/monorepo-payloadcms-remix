@@ -1,0 +1,26 @@
+{
+  "name": "tsup-config",
+  "description": "tsup configuration",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "index.js"
+  ],
+  "exports": {
+    "import": "./index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "tsup": "^6.2.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "packageManager": "pnpm@7.3.0",
+  "volta": {
+    "node": "16.16.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "ts-config/react-library.json",
+  "include": ["src/payload.ts", "src/index.ts"],
+  "exclude": ["node_modules", "build", ".cache"],
+  "compilerOptions": {
+    "outDir": "./build",
+    "rootDir": "./src",
+    "declaration": true,
+    "declarationDir": "build"
+  }
+}

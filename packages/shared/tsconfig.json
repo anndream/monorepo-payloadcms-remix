@@ -1,0 +1,13 @@
+{
+    "extends": "ts-config/base.json",
+    "include": ["index.ts"],
+    "exclude": ["node_modules", "build"],
+    "compilerOptions": {
+        "lib": ["ES2019"],
+        "module": "ESNext",
+        "target": "ES2019",
+        "outDir": "./build",
+        "rootDir": "."
+    },
+    "noEmit": true
+}
